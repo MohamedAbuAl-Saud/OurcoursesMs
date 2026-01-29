@@ -42,6 +42,7 @@
             position: relative;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            direction: rtl;
         }
 
         .container {
@@ -51,7 +52,6 @@
             padding: 0 8px;
         }
 
-        /* Preloader - Updated */
         .preloader {
             position: fixed;
             top: 0;
@@ -65,6 +65,7 @@
             align-items: center;
             z-index: 9999;
             transition: opacity 0.8s, visibility 0.8s;
+            direction: rtl;
         }
 
         .preloader.hidden {
@@ -116,12 +117,6 @@
             100% { transform: scale(1.05); opacity: 1; }
         }
 
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        /* Header */
         header {
             position: fixed;
             top: 0;
@@ -205,7 +200,6 @@
             width: 100%;
         }
 
-        /* Hero */
         .hero {
             padding: 80px 0 20px;
             text-align: center;
@@ -314,7 +308,6 @@
             transform: translateY(-2px);
         }
 
-        /* Marquee */
         .marquee {
             overflow: hidden;
             white-space: nowrap;
@@ -343,7 +336,6 @@
             100% { transform: translateX(-50%); }
         }
 
-        /* Stats */
         .stats-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -376,7 +368,6 @@
             color: #aaa;
         }
 
-        /* Sections */
         section {
             padding: 30px 0;
         }
@@ -402,7 +393,6 @@
             background: linear-gradient(90deg, var(--primary), var(--secondary));
         }
 
-        /* Categories */
         .categories {
             display: flex;
             justify-content: center;
@@ -435,7 +425,6 @@
             color: var(--primary);
         }
 
-        /* Courses */
         .courses-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -597,7 +586,6 @@
             font-weight: 700;
         }
 
-        /* Payment Methods */
         .payment-countries {
             margin-bottom: 20px;
             padding: 0 8px;
@@ -668,7 +656,6 @@
             font-size: 9px;
         }
 
-        /* Contact */
         .contact-info {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -724,7 +711,6 @@
             margin-top: 3px;
         }
 
-        /* Forms */
         .form-group {
             margin-bottom: 12px;
         }
@@ -791,7 +777,6 @@
             font-size: 10px;
         }
 
-        /* Modal */
         .modal {
             position: fixed;
             top: 0;
@@ -865,7 +850,6 @@
             gap: 6px;
         }
 
-        /* Footer */
         footer {
             background: rgba(0, 0, 0, 0.95);
             padding: 25px 0 12px;
@@ -945,7 +929,6 @@
             margin-bottom: 2px;
         }
 
-        /* Back to Top */
         .back-to-top {
             position: fixed;
             bottom: 10px;
@@ -975,7 +958,6 @@
             background: #0052cc;
         }
 
-        /* Notification */
         .notification {
             position: fixed;
             top: 12px;
@@ -996,7 +978,6 @@
             transform: translateX(0);
         }
 
-        /* Custom Cursor */
         .custom-cursor {
             position: fixed;
             width: 6px;
@@ -1022,7 +1003,6 @@
             border-color: var(--secondary);
         }
 
-        /* Matrix Rain */
         .matrix-rain {
             position: fixed;
             top: 0;
@@ -1034,7 +1014,6 @@
             opacity: 0.1;
         }
 
-        /* Grid Lines */
         .grid-lines {
             position: fixed;
             top: 0;
@@ -1060,7 +1039,6 @@
             height: 1px;
         }
 
-        /* Noise Texture */
         .noise-texture {
             position: fixed;
             top: 0;
@@ -1073,7 +1051,6 @@
             opacity: 0.3;
         }
 
-        /* Morphing Background */
         .morphing-bg {
             position: fixed;
             top: 0;
@@ -1099,7 +1076,6 @@
             75% { transform: translate(50px, -50px) scale(1.1); }
         }
 
-        /* Floating Shapes */
         .floating-shape {
             position: fixed;
             border-radius: 50%;
@@ -1108,7 +1084,6 @@
             z-index: -1;
         }
 
-        /* Terminal */
         .terminal {
             background: rgba(0, 0, 0, 0.9);
             border-radius: 6px;
@@ -1138,7 +1113,6 @@
             color: #aaa;
         }
 
-        /* Instructor Info */
         .instructor-info {
             display: flex;
             align-items: center;
@@ -1169,7 +1143,6 @@
             font-size: 11px;
         }
 
-        /* Responsive */
         @media (min-width: 768px) {
             .container {
                 max-width: 90%;
@@ -1340,13 +1313,11 @@
             }
         }
 
-        /* Performance Optimizations */
         .performance-optimize {
             transform: translateZ(0);
             backface-visibility: hidden;
         }
 
-        /* Scrollbar */
         ::-webkit-scrollbar {
             width: 4px;
         }
@@ -1364,7 +1335,6 @@
             background: #0052cc;
         }
 
-        /* Touch Improvements */
         @media (hover: none) and (pointer: coarse) {
             .btn:hover,
             .course-card:hover,
@@ -1381,15 +1351,12 @@
     </style>
 </head>
 <body>
-    <!-- Effects -->
     <div class="noise-texture"></div>
     <div class="grid-lines" id="gridLines"></div>
     <div class="morphing-bg" id="morphingBg"></div>
     <div class="custom-cursor" id="customCursor"></div>
     <div class="matrix-rain" id="matrixRain"></div>
-    <!-- تم إزالة scan-line -->
 
-    <!-- Preloader - Updated -->
     <div class="preloader" id="preloader">
         <img src="https://i.ibb.co/ZzBcYFr1/1767997097582.jpg" alt="OurCourses-Ms Logo" class="preloader-logo">
         <div class="preloader-text">OurCourses-Ms</div>
@@ -1398,7 +1365,6 @@
         </div>
     </div>
 
-    <!-- Header -->
     <header>
         <div class="container header-container">
             <div class="logo" onclick="scrollToTop()">
@@ -1417,7 +1383,6 @@
         </div>
     </header>
 
-    <!-- Hero -->
     <section id="home" class="hero">
         <div class="container">
             <h1>OurCourses-Ms</h1>
@@ -1449,7 +1414,6 @@
         </div>
     </section>
 
-    <!-- Marquee -->
     <section class="marquee">
         <div class="marquee-content">
             <span class="marquee-item">دورات الأمن السيبراني</span>
@@ -1464,7 +1428,6 @@
         </div>
     </section>
 
-    <!-- Stats -->
     <section id="stats">
         <div class="container">
             <div class="stats-container">
@@ -1488,7 +1451,6 @@
         </div>
     </section>
 
-    <!-- About -->
     <section id="about">
         <div class="container">
             <h2 class="section-title">عن المدرب</h2>
@@ -1517,7 +1479,6 @@
         </div>
     </section>
 
-    <!-- Courses -->
     <section id="courses">
         <div class="container">
             <h2 class="section-title">الدورات المتاحة</h2>
@@ -1530,7 +1491,6 @@
             </div>
 
             <div class="courses-grid" id="courses-container">
-                <!-- Course 1 -->
                 <div class="course-card" data-category="main">
                     <div class="course-header">
                         <h3 class="course-title">أساسيات الأمن السيبراني</h3>
@@ -1573,7 +1533,6 @@
                     </div>
                 </div>
 
-                <!-- Course 2 -->
                 <div class="course-card" data-category="main">
                     <div class="course-header">
                         <h3 class="course-title">الأمن السيبراني المتقدم</h3>
@@ -1617,7 +1576,6 @@
                     </div>
                 </div>
 
-                <!-- Course 3 -->
                 <div class="course-card" data-category="main">
                     <div class="course-header">
                         <h3 class="course-title">فريق Red Team المتقدم</h3>
@@ -1662,7 +1620,6 @@
                     </div>
                 </div>
 
-                <!-- Security Courses -->
                 <div class="course-card" data-category="security">
                     <div class="course-header">
                         <h3 class="course-title">اختراق الأجهزة</h3>
@@ -1823,7 +1780,6 @@
                     </div>
                 </div>
 
-                <!-- Programming Courses -->
                 <div class="course-card" data-category="programming">
                     <div class="course-header">
                         <h3 class="course-title">بايثون للأمن</h3>
@@ -1949,7 +1905,6 @@
         </div>
     </section>
 
-    <!-- Payment Methods -->
     <section id="payment" style="background: rgba(0, 102, 255, 0.03); padding: 30px 0;">
         <div class="container">
             <h2 class="section-title">طرق الدفع</h2>
@@ -1958,7 +1913,6 @@
             </p>
             
             <div class="payment-countries">
-                <!-- Binance P2P -->
                 <div class="country-section" style="border: 1px solid var(--accent);">
                     <h3 class="country-title" style="color: var(--accent);">
                         <i class="fas fa-exchange-alt"></i> Binance P2P (موصى به)
@@ -1979,7 +1933,6 @@
                     </div>
                 </div>
 
-                <!-- مصر -->
                 <div class="country-section">
                     <h3 class="country-title">🇪🇬 مصر</h3>
                     <div class="payment-methods-grid">
@@ -2013,7 +1966,6 @@
                     </div>
                 </div>
 
-                <!-- العراق -->
                 <div class="country-section">
                     <h3 class="country-title">🇮🇶 العراق</h3>
                     <div class="payment-methods-grid">
@@ -2047,7 +1999,6 @@
                     </div>
                 </div>
 
-                <!-- السعودية -->
                 <div class="country-section">
                     <h3 class="country-title">🇸🇦 السعودية</h3>
                     <div class="payment-methods-grid">
@@ -2081,7 +2032,6 @@
                     </div>
                 </div>
 
-                <!-- الإمارات -->
                 <div class="country-section">
                     <h3 class="country-title">🇦🇪 الإمارات</h3>
                     <div class="payment-methods-grid">
@@ -2106,7 +2056,6 @@
                     </div>
                 </div>
 
-                <!-- الأردن -->
                 <div class="country-section">
                     <h3 class="country-title">🇯🇴 الأردن</h3>
                     <div class="payment-methods-grid">
@@ -2131,7 +2080,6 @@
                     </div>
                 </div>
 
-                <!-- الكويت -->
                 <div class="country-section">
                     <h3 class="country-title">🇰🇼 الكويت</h3>
                     <div class="payment-methods-grid">
@@ -2156,7 +2104,6 @@
                     </div>
                 </div>
 
-                <!-- قطر -->
                 <div class="country-section">
                     <h3 class="country-title">🇶🇦 قطر</h3>
                     <div class="payment-methods-grid">
@@ -2181,7 +2128,6 @@
                     </div>
                 </div>
 
-                <!-- عمان -->
                 <div class="country-section">
                     <h3 class="country-title">🇴🇲 عمان</h3>
                     <div class="payment-methods-grid">
@@ -2206,7 +2152,6 @@
                     </div>
                 </div>
 
-                <!-- الجزائر -->
                 <div class="country-section">
                     <h3 class="country-title">🇩🇿 الجزائر</h3>
                     <div class="payment-methods-grid">
@@ -2231,7 +2176,6 @@
                     </div>
                 </div>
 
-                <!-- المغرب -->
                 <div class="country-section">
                     <h3 class="country-title">🇲🇦 المغرب</h3>
                     <div class="payment-methods-grid">
@@ -2256,7 +2200,6 @@
                     </div>
                 </div>
 
-                <!-- العملات الرقمية -->
                 <div class="country-section" style="border: 1px solid #f0b90b;">
                     <h3 class="country-title">
                         <i class="fab fa-bitcoin"></i> العملات الرقمية
@@ -2301,7 +2244,6 @@
                     </div>
                 </div>
 
-                <!-- المدفوعات الدولية -->
                 <div class="country-section">
                     <h3 class="country-title">
                         <i class="fas fa-globe"></i> المدفوعات الدولية
@@ -2344,7 +2286,6 @@
         </div>
     </section>
 
-    <!-- Contact -->
     <section id="contact">
         <div class="container">
             <h2 class="section-title">اتصل بنا</h2>
@@ -2475,7 +2416,6 @@
         </div>
     </section>
 
-    <!-- Modal -->
     <div class="modal" id="purchaseModal">
         <div class="modal-content">
             <div class="modal-header">
@@ -2589,7 +2529,6 @@
         </div>
     </div>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -2647,22 +2586,17 @@
         </div>
     </footer>
 
-    <!-- Back to Top -->
     <a href="#home" class="back-to-top" id="backToTop">
         <i class="fas fa-arrow-up"></i>
     </a>
 
-    <!-- Notification -->
     <div class="notification" id="notification"></div>
 
     <script>
-        // Initialize
         document.addEventListener('DOMContentLoaded', function() {
-            // Start loader animation
             const loaderBar = document.getElementById('loaderBar');
             loaderBar.style.width = '100%';
             
-            // Hide preloader after 2.5 seconds
             setTimeout(() => {
                 document.getElementById('preloader').classList.add('hidden');
                 setTimeout(() => {
@@ -2673,7 +2607,6 @@
         });
 
         function initPage() {
-            // Mobile Menu
             const mobileToggle = document.getElementById('mobileMenu');
             const navMenu = document.getElementById('navMenu');
 
@@ -2684,7 +2617,6 @@
                     : '<i class="fas fa-bars"></i>';
             });
 
-            // Close menu on link click
             document.querySelectorAll('nav a').forEach(link => {
                 link.addEventListener('click', () => {
                     navMenu.classList.remove('active');
@@ -2692,7 +2624,6 @@
                 });
             });
 
-            // Smooth Scroll
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -2709,7 +2640,6 @@
                 });
             });
 
-            // Back to Top
             const backToTop = document.getElementById('backToTop');
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 300) {
@@ -2719,7 +2649,6 @@
                 }
             });
 
-            // Stats Animation
             const statNumbers = document.querySelectorAll('.stat-number');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -2747,7 +2676,6 @@
                 }, 25);
             }
 
-            // Course Filtering
             const categoryBtns = document.querySelectorAll('.category-btn');
             const courseCards = document.querySelectorAll('.course-card');
 
@@ -2768,7 +2696,6 @@
                 });
             });
 
-            // Contact Method Selection
             const contactMethodOptions = document.querySelectorAll('.contact-method-option');
             contactMethodOptions.forEach(option => {
                 option.addEventListener('click', function() {
@@ -2798,7 +2725,6 @@
                 });
             });
 
-            // Enrollment System
             const enrollButtons = document.querySelectorAll('.btn-enroll');
             const purchaseModal = document.getElementById('purchaseModal');
             const modalClose = document.getElementById('modalClose');
@@ -2820,7 +2746,6 @@
             let selectedCourse = '';
             let selectedPrice = '';
 
-            // Enrollment Contact Method Selection
             const enrollmentMethodOptions = document.querySelectorAll('#purchaseModal .contact-method-option');
             enrollmentMethodOptions.forEach(option => {
                 option.addEventListener('click', function() {
@@ -2845,7 +2770,6 @@
                 });
             });
 
-            // Payment method change handler
             paymentMethodSelect.addEventListener('change', function() {
                 if (this.value === 'crypto-direct') {
                     cryptoOptions.style.display = 'block';
@@ -2863,7 +2787,6 @@
                     coursePriceInput.value = `$${selectedPrice}`;
                     egpPrice.textContent = `(${selectedPrice * 50} جنيه)`;
                     
-                    // Reset form
                     countrySelect.value = '';
                     paymentMethodSelect.value = '';
                     cryptoOptions.style.display = 'none';
@@ -2973,7 +2896,6 @@
                 document.getElementById('purchaseForm').reset();
             }
 
-            // Contact Form
             const contactForm = document.getElementById('contactForm');
             if (contactForm) {
                 contactForm.addEventListener('submit', (e) => {
@@ -3036,7 +2958,6 @@
                 });
             }
 
-            // Custom Cursor
             const cursor = document.getElementById('customCursor');
             
             if (window.innerWidth > 768) {
@@ -3059,7 +2980,6 @@
                 cursor.style.display = 'none';
             }
 
-            // Matrix Rain Effect
             function initMatrixRain() {
                 const matrixRain = document.getElementById('matrixRain');
                 if (window.innerWidth <= 768) return;
@@ -3108,7 +3028,6 @@
                 drawMatrix();
             }
 
-            // Grid Lines
             function initGridLines() {
                 const gridLines = document.getElementById('gridLines');
                 const lineSpacing = 35;
@@ -3128,7 +3047,6 @@
                 }
             }
 
-            // Morphing Background
             function initMorphingBg() {
                 const morphingBg = document.getElementById('morphingBg');
                 const colors = ['#0066ff', '#ff0055', '#00ff88'];
@@ -3146,7 +3064,6 @@
                 }
             }
 
-            // Floating Shapes
             function createFloatingShapes() {
                 const colors = ['#0066ff', '#ff0055', '#00ff88'];
                 
@@ -3178,17 +3095,14 @@
                 }
             }
 
-            // Initialize effects
             initMatrixRain();
             initGridLines();
             initMorphingBg();
             createFloatingShapes();
 
-            // GSAP Animations
             if (typeof gsap !== 'undefined') {
                 gsap.registerPlugin(ScrollTrigger);
 
-                // Animate elements on scroll
                 gsap.utils.toArray('.course-card, .stat-card, .payment-method').forEach(element => {
                     gsap.from(element, {
                         scrollTrigger: {
@@ -3204,7 +3118,6 @@
                     });
                 });
 
-                // Hero animation
                 gsap.from('.hero h1, .hero h2, .hero p, .badges, .buttons', {
                     duration: 0.6,
                     y: 15,
@@ -3214,7 +3127,6 @@
                 });
             }
 
-            // Performance optimizations for mobile
             if ('ontouchstart' in window) {
                 document.querySelectorAll('.btn, .course-card, .payment-method').forEach(el => {
                     el.style.webkitTapHighlightColor = 'transparent';
@@ -3239,7 +3151,6 @@
             }, 2500);
         }
 
-        // Handle window resize
         window.addEventListener('resize', () => {
             const cursor = document.getElementById('customCursor');
             if (window.innerWidth <= 768) {
@@ -3250,4 +3161,4 @@
         });
     </script>
 </body>
-        </html>
+    </html>
